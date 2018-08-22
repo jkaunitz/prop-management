@@ -18,8 +18,7 @@ class Dashboard extends Component {
                     title: 'Requests',
                     active: false,
                     component: <h4>Hey There - Requests</h4>
-                },
-
+                }
             ]
         }
     }

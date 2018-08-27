@@ -6,18 +6,15 @@ class NewNewsletter extends Component {
 
     onSubmit = (fields) => {
 
-        if(button == 'submit') {
+        // if(button == 'submit') {
             // save new newsletter on the backend. perform a post request here.
-            console.log('trying to submit to backend.');
-        } 
+        //    console.log('trying to submit to backend.');
+        //} 
         this.props.history.push('/dashboard');
-        console.log('trying to submit');
     }
 
     onCancel = (fields) => {
-        this.props.history.push('/dashboard');
-        console.log('trying to cancel');
-
+        // this.props.history.push('/dashboard');
     }
 
     render() {

@@ -6,6 +6,7 @@ import * as actions from '../../actions';
 import NewsletterBox from './newsletterBox';
 import NewsletterLatest from './newsletterLatest';
 
+
 class NewsletterDetail extends Component {
 
     componentDidMount() {
@@ -16,8 +17,8 @@ class NewsletterDetail extends Component {
         console.log(this.props.newsletterToEdit);
         return (
             <div className='newsletter-detail'>
-                <NewsletterBox/>
-                <NewsletterLatest/>
+                <NewsletterBox date={this.props.newsletterToEdit.date}/>
+                <NewsletterLatest {...this.props.newsletterToEdit}/>
             </div>
         )
     }

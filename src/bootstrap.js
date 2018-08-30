@@ -6,7 +6,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 import reduxThunk from 'redux-thunk';
 import reducers from './reducers';
 
-const createStoreWithMiddleware = applyMiddleware()(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)));
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)));
 
 // import 'bootstrap/dist/css/bootstrap.css';
 import './style/main.scss';

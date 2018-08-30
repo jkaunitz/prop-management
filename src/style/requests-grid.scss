@@ -7,6 +7,7 @@
     grid-template-columns: [boxes-s] 16rem [boxes-e requests-s] 960px [requests-e];
 
     grid-column-gap:  6.1rem;
+    
 
     &__button {
         grid-row: add-s/add-e;

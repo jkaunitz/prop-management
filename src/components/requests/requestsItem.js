@@ -16,16 +16,19 @@ class RequestsItem extends Component {
     }
 
     toggleDropdown = () => {
+        var elemnt = document.getElementById('requests-item');
         if(this.state.height ==0) {
+            element.classList.add('bj-F8');
             this.setState({height: 'auto'})
         } else {
+            element.classList.remove('bj-F8');
             this.setState({height: 0})
         }
     }
 
     render() {
         return (
-            <div className='requests-item'>
+            <div id='requests-item' className='requests-item'>
                 <Icon className='requests-item__icon' icon='fas fa-exclamation-triangle'/>
                 <div className='requests-item__title'>
                     <div className='requests-item__title__text'>Yo my door fell down</div>

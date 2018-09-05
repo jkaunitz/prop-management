@@ -1,17 +1,29 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import { Header, HeaderBar } from './header';
 
 class Layout extends Component {
     render() {
+        const { title, subtitle, hideBar } = this.props;
         return (
             <div className='layout-grid'>
-                <Header/>
-                <HeaderBar/>
+                <Header
+                    title={title}
+                    subtitle={subtitle}
+                />
+                {this.props.hideBar ? '' : <HeaderBar/>}
                 {this.props.children}
             </div>
         )
     }
 }
 
-export default Layout;
+function mapStateToProps(state) {
+    const header = state.header;
+    return {
+        ...header
+    }
+}
+
+Layout = connect(mapStateToProps)(Layout);

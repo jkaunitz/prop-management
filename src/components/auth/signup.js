@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../actions';
 
 import SignupForm from './signupForm';
 
@@ -20,4 +22,4 @@ class Signup extends Component {
     }
 }
 
-export default Signup;
+export default connect(null, actions)(Signup);

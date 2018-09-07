@@ -1,4 +1,4 @@
-import REact, { Component } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class RequireAdmin extends Component {

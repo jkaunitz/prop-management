@@ -11,8 +11,7 @@ export class FormInput extends Component {
                     className='form-input__input'
                     type={type}
                     {...input}
-                    placeholder={placeholder}
-                    value={editValue ? editValue : input.value}    
+                    placeholder={placeholder}   
                 />
             </div>
         )
@@ -29,8 +28,7 @@ export class FormTextArea extends Component {
                     className='form-textarea__input'
                     type={type}
                     {...input}
-                    placeholder={placeholder}
-                    value={editValue ? editValue : input.value}                    
+                    placeholder={placeholder}                  
                 />
                 
                 {/* </textarea> */}

@@ -27,3 +27,5 @@ function mapStateToProps(state) {
 }
 
 Layout = connect(mapStateToProps)(Layout);
+
+export default Layout;

@@ -6,7 +6,7 @@ const INITIAL_STATE = {
     hideBar: false
 }
 
-export default function(state = IniTIAL_STATE, action) {
+export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
         case UPDATE_HEADER:
             const { title, subtitle, hideBar } = action.payload;

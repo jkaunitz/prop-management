@@ -5,7 +5,7 @@ import { ROOT_URL } from '../config';
 
 import { 
     AUTHENTICATE_USER
-} from '../types';
+} from './types';
 
 export function signUp(fields, success) {
     return function(dispatch) {

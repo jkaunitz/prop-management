@@ -5,15 +5,23 @@ import * as actions from '../../actions';
 import NewNewsletterForm from './newsletterNewForm';
 
 class EditNewsletter extends Component {
+    
     onSubmit = (fields) => {
-        // if(button == 'submit') {
-            // save new newsletter on the backend. perform a post request here.
-        //    console.log('trying to submit to backend.');
-        //} 
-        this.props.history.push('/dashboard');
+
+        const { title, body, image } = fields;
+
+        var formData = new FormData();
+        formData.append('title', title);
+        formData.append('body', body);
+        formData.append('image', image);
+
+        this.props.editNewsletter(this.componentWillMount.match.params.id, formData, () => {
+            this.props.history.push('/dashboard');
+        })
+        
     };
 
-    onCancel = (fields) => {
+    onCancel = () => {
         this.props.history.push('/dashboard');
     };
 
@@ -37,11 +45,4 @@ class EditNewsletter extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    const { newsletterToEdit } = state.newsletters;
-    return {
-        newsletterToEdit
-    }
-}
-
-export default connect(mapStateToProps, actions)(EditNewsletter);
+export default connect(null, actions)(EditNewsletter);
